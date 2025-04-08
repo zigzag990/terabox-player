@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,22 +7,36 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎬 Terabox Player</h1>
-    <input type="text" id="linkInput" placeholder="Paste your Terabox link here" />
-    <button onclick="playVideo()">Play Video</button>
-    <div class="video-box" id="videoBox"></div>
-
+  <header>
+    <h1>🎥 Terabox Player</h1>
     <div class="theme-toggle">
-      <button onclick="toggleTheme()">🌗 Toggle Dark/Light</button>
+      <span>🌙</span>
+      <label class="switch">
+        <input type="checkbox" id="theme-switch" />
+        <span class="slider round"></span>
+      </label>
+      <span>☀️</span>
     </div>
+  </header>
 
-    <div class="donate">
-      <a href="https://buymeacoffee.com/jockie" target="_blank">
-        ☕ Support me on BuyMeACoffee
-      </a>
-    </div>
-  </div>
+  <!-- Top Ad -->
+  <div class="ad ad-top">[Top Ad Placeholder]</div>
+
+  <main>
+    <input type="text" id="linkInput" placeholder="Enter your Terabox video link" />
+    <button onclick="playVideo()">Play Video</button>
+    <div id="videoContainer"></div>
+
+    <!-- Mid Promo Ad -->
+    <div class="ad ad-mid">🎯 <strong>Promoted:</strong> Try our new cloud storage booster!</div>
+  </main>
+
+  <!-- Bottom Ad -->
+  <div class="ad ad-bottom">[Bottom Ad Placeholder]</div>
+
+  <footer>
+    <p>Support us: <a href="https://www.buymeacoffee.com/jockie" target="_blank">BuyMeACoffee</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
